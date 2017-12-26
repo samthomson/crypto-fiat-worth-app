@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { StatusBar, Text, TouchableHighlight, View } from 'react-native'
+import { StatusBar, Text, View, TouchableOpacity } from 'react-native'
 import globalStyles from '../styles/global'
 
 import {CredentialForm} from '../components/CredentialForm'
@@ -18,29 +18,29 @@ class GuestHomeScreen extends Component {
                 onSubmit={(state) => console.log('login form submitted') }
             />
 
-            <TouchableHighlight
-                style={globalStyles.button}
-                onPress={() => navigate(
-                    "ListCurrenciesScreen",
-                    {
-                        screen: "List Currencies"
-                    }
-                )}
-            >
-                <Text>login</Text>
-
-            </TouchableHighlight>
-
-            <TouchableHighlight
-                style={globalStyles.button}
+            <TouchableOpacity
+                style={styles.registerLink}
                 onPress={() => navigate("RegisterScreen", {screen: "Register"})}
             >
-                <Text>register</Text>
-
-            </TouchableHighlight>
+                <Text style={styles.registerLinkText}>or register</Text>
+            </TouchableOpacity>
         </View>
       );
     }
 }
+
+const styles = {
+    registerLink: {
+        paddingTop: 10,
+        alignItems: 'center'
+    },
+    registerLinkText: {
+        fontSize: 18,
+        borderColor: 'black',
+        textDecorationLine: "underline",
+        textDecorationStyle: "solid",
+        textDecorationColor: "#000"
+    }
+};
 
 export default GuestHomeScreen

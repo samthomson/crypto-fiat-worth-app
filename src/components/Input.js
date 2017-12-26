@@ -31,7 +31,7 @@ const Input = (props) => {
 const styles = {
     inputStyle: {
         color: '#000',
-        paddingRight: 5,
+        paddingRight: 0,
         paddingLeft: 5,
         fontSize: 18,
         lineHeight: 23,
@@ -45,10 +45,10 @@ const styles = {
         flex: 1
     },
     containerStyle: {
-        height: 40,
+        height: 80,
         flex: 1,
         flexDirection: 'row',
-        alignItems: 'center' 
+        alignItems: 'center'
     }
 };
 

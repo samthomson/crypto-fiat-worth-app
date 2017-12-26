@@ -21,39 +21,38 @@ class CredentialForm extends Component {
     }
 
     render () {
-        const { inputStyle, labelStyle, containerStyle } = styles
+        const { inputStyle, buttonStyle, containerStyle } = styles
         const { submitText, onSubmit } = this.props
 
         return (
-            <View style={{ height: 40}}>
+            <View style={containerStyle}>
                 {/* email and password input, submit button with submit event raised */}
-                <Input label="email" value={state.email}/>
-                <Input label="password" value={state.password} secureTextEntry={true} />
-                <Button onPress={onSubmit}>{submitText}</Button>
+                <Input
+                    label="email"
+                    value={state.email}
+                />
+                <Input
+                    label="password"
+                    value={state.password}
+                    secureTextEntry={true}
+                />
+                <Button 
+                    onPress={onSubmit}
+                    style={buttonStyle}
+                >{submitText}</Button>
             </View>
         )
     }
 }
 
 const styles = {
-    inputStyle: {
-        color: '#000',
-        paddingRight: 5,
-        paddingLeft: 5,
-        fontSize: 18,
-        lineHeight: 23,
-        flex: 2
-    },
-    labelStyle: {
-        fontSize: 18,
-        paddingLeft: 20,
+    buttonStyle: {
         flex: 1
     },
     containerStyle: {
-        height: 40,
-        flex: 1,
-        flexDirection: 'row',
-        alignItems: 'center' 
+        height: 160,
+        paddingLeft: 15,
+        paddingRight: 15
     }
 };
 

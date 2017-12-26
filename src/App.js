@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import { View, Text } from 'react-native'
+import { StatusBar, Text, View } from 'react-native'
+import { Header } from './components/Header'
 
 class App extends Component {
 
@@ -7,6 +8,7 @@ class App extends Component {
 
         return (
             <View>
+                <Header />
                 <Text>home</Text>
             </View>
         )

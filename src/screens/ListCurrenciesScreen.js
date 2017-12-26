@@ -10,11 +10,11 @@ class ListCurrenciesScreen extends Component {
       const { navigate } = this.props.navigation
       return (
         <View style={globalStyles.container}>
+            <Text>Currency list</Text>
             <TouchableHighlight
-                onPress={() => navigate("ListCurrencies", {screen: "List Currencies Screen"})}
+                onPress={() => navigate("AddCurrencyScreen", {screen: "Add Currency Holding"})}
             >
-                <Text>Guest - login</Text>
-
+                <Text>add Currency holding</Text>
             </TouchableHighlight>
         </View>
       );

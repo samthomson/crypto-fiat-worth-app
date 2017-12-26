@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import { Text, View } from 'react-native'
 import globalStyles from '../styles/global'
 
+import {CredentialForm} from '../components/CredentialForm'
+
 class RegisterScreen extends Component {
     static navigationOptions = {
       title: "Register"
@@ -10,7 +12,10 @@ class RegisterScreen extends Component {
       const { navigate } = this.props.navigation
       return (
         <View style={globalStyles.container}>
-            <Text>register here</Text>
+            <CredentialForm
+                submitText="Register"
+                onSubmit={(state) => console.log('register form submitted') }
+            />
         </View>
       );
     }
